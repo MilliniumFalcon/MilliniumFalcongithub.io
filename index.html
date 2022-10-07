@@ -1,0 +1,123 @@
+<html>
+  <head>
+        <style> p{ color: black; font-size: 20px;} </style>
+        <title > Star Wars </title>
+        
+          <script>
+            
+            function banner(){
+            var text = confirm("Did You Really Want to Click on My Banner?");
+            return text;
+            }
+            
+            
+            function answer(){
+              var radio = document.getElementsByName("trivia");
+              var selection = false;
+              var message = "";
+
+              for( var i = 0; i < radio.length; i++) {
+                if(radio[i].value == "yes" && radio[i].checked == true) {
+              selection = true;
+              } //end if statement
+              } //end for loop
+
+              if(selection == true) {
+              message = message + "<b><p style='color:green'>Way to go!</p></b>";
+              } else {
+              message = message + "<b><p style='color:red'>Try again my friend.</p              ></b>";
+              }
+              document.getElementById("response").innerHTML = message;
+
+              } //end function answer
+            
+          </script>
+          <link type="text/css" rel="stylesheet" href="main.css" />
+        
+  </head>
+  <body id= background >
+    
+    
+    <a onclick="return banner()" href="https://www.amazon.com//">
+      <header id="banner" class= sub-heading>
+        <center> Website Created by N.M.C.</center>
+      </header>
+    </a>
+      <h1 class= heading> Star Wars Ships </h1>
+        <p class= paragraph> <strong> Star Wars</strong> is a well known movie series all around the world. One of the coolest things about Star Wars is the <i> Imperial and Rebel Ships</i> that are battleing for control of the galaxy. You will learn about the <u> ships that changed the  world of star wars</u> so tag along and find out. </p>
+       
+       
+       
+       <nav>
+             
+            <ul id= navmenu>
+                
+              <li class=navitem> <a href=index.html> Home</a>  </li>
+              
+              <li class=navitem> <a href=games.html> Games</a></li>
+              
+              <li class=navitem> <a href=videos.html> Videos</a> </li>
+              
+              <li class=navitem> <a href=pictures.html> Pictues</a> </li>
+            </ul>
+            
+       </nav>
+      
+       
+       
+      
+      <div class=rightside>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/7uvul1SYNFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <img src=https://thumbs.dreamstime.com/t/lego-star-wars-millennium-falcon-138588817.jpg>
+      <img src=https://thumbs.dreamstime.com/t/star-wars-death-star-lego-model-65735710.jpg>
+      <hr>
+      
+          <center class= heading> Noah <a href="https://www.amazon.com//">My favorite Website</a> </center>
+        
+    <br>
+    
+       </div>
+       
+       
+       <div class= leftside>
+         
+         <h2 class= heading> Table of Contents</h2>
+            <div class= wrap-list>
+              <ul>
+                <li class= content> All about Old Republic Ships </li>
+                <li class= content> All about Rebel Ships </li>
+                <li class= content> All about Imprial Ships </li>
+              </ul>
+            </div>
+        <br>
+        
+            <div class= trivia>
+              <h2 class= heading> Imperial Trivia Question </h2>
+                <marquee> <p class= sub-heading> What was the name of the Imperial base that destroyed Alderaan</p> </marquee>
+            <br>
+            
+            
+              <form class= content>
+                
+                <div id=response> </div>
+                
+                <input type="radio" name="trivia" value="no"> Death Star 1
+            <br>
+                <input type="radio" name="trivia" value="yes"> Death Star 2
+            <br>
+               <input type="radio" name="trivia" value="no"> Star Killer Base
+            <br>
+               <input type="radio" name="trivia" value="no"> None of the Above
+            <br>
+               <input onclick=answer()  id=button type="button" value="Submit">
+              </form>
+          </div>
+        </div>
+      <div class=cleatfloat></div>
+       <br>
+       <br>
+       <br>
+    <footer id= footer class= sub-heading> <center> This website is not yours <spam class= bold-text> DO NOT</spam> steal parts of it </center></footer>
+  </body>
+</html>
